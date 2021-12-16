@@ -2,11 +2,19 @@
   "name": "sokuanProject",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server2.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "netstart": "nodemon ./bin/www"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gulp": "^4.0.2",
+    "http-proxy-middleware": "^2.0.1",
+    "nodemon": "^2.0.15"
+  }
 }

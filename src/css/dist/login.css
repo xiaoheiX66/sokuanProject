@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+div, section, header, footer, ul, li {
+  display: flex;
+}
+
+i {
+  font-style: normal;
+}
+
+#boxAll {
+  width: 100%;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+#boxAll header {
+  width: 100%;
+  height: 120px;
+  align-items: center;
+}
+#boxAll header div {
+  width: 162px;
+  height: 48px;
+  font-size: 31px;
+  color: #333333;
+  padding: 0px 26px;
+  margin-left: 342px;
+  border-left: 1px solid #e5e5e5;
+}
+#boxAll #mainContent {
+  width: 100%;
+  height: 648px;
+  background-color: #888888;
+  position: relative;
+  align-items: center;
+}
+#boxAll #mainContent #loginPage {
+  position: absolute;
+  width: 506px;
+  height: 564px;
+  background-color: #ffffff;
+  right: 270px;
+}
+#boxAll #mainContent #loginPage form {
+  width: 100%;
+}
+#boxAll #mainContent #loginPage form ul {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+#boxAll #mainContent #loginPage form ul li {
+  width: 90%;
+  height: 58px;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(1) {
+  margin-top: 40px;
+  padding: 3px 0px;
+  flex-direction: column;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(1) p:nth-child(1) {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(1) p:nth-child(2) {
+  font-size: 17px;
+  color: #6c6c6c;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(1) p:nth-child(2) i {
+  color: #fb658a;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) {
+  flex: 1;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont {
+  width: 100%;
+  height: 255px;
+  margin-top: 45px;
+  flex-direction: column;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont input {
+  height: 55px;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont input:nth-of-type(2) {
+  margin-top: 15px;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont button {
+  margin-top: 38px;
+  height: 48px;
+  line-height: 48px;
+  background-color: #fb658a;
+  color: #ffffff;
+  font-size: 20px;
+  border: none;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont p {
+  height: 38px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont p input {
+  width: 18px;
+  height: 18px;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont p i {
+  height: 100%;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont p span {
+  font-size: 15px;
+  color: #6c6c6c;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont p span:nth-child(1) {
+  margin-top: 7px;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont p span:nth-child(2) {
+  margin-left: -282px;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(2) .logincont p span:nth-child(3) {
+  text-align: right;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(3) {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+#boxAll #mainContent #loginPage form ul li:nth-child(3) p {
+  min-width: 150px;
+  font-size: 17px;
+  color: #333333;
+  text-align: center;
+}
+#boxAll #mainContent #loginPage form ul input {
+  text-align: center;
+  border: 1px solid #ebebeb;
+}
+#boxAll footer {
+  width: 100%;
+  height: 150px;
+  flex-direction: column;
+  justify-content: center;
+}
+#boxAll footer div {
+  width: 100%;
+  height: 37px;
+}
+#boxAll footer div:nth-child(1) {
+  margin-top: 27px;
+}
+#boxAll footer div:nth-child(1) ul {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#boxAll footer div:nth-child(1) ul li {
+  min-width: 120px;
+  font-size: 17px;
+  color: #333333;
+  justify-content: center;
+  border-right: 1px solid #e5e7ec;
+}
+#boxAll footer div:nth-child(1) ul li:nth-child(4) {
+  border: none;
+}
+#boxAll footer div:nth-child(2) {
+  justify-content: center;
+  align-items: center;
+}
+#boxAll footer div:nth-child(2) p {
+  font-size: 15px;
+  color: #a99ca9;
+}
+#boxAll footer div:nth-child(3) {
+  margin-top: 12px;
+  justify-content: center;
+}
+#boxAll footer div:nth-child(3) img {
+  width: 110px;
+  height: 100%;
+}
+#boxAll footer div:nth-child(3) img:nth-child(1) {
+  margin-left: -10px;
+}
+#boxAll footer div:nth-child(3) img:nth-child(2) {
+  margin-left: 20px;
+}

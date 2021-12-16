@@ -13,7 +13,7 @@ let connects = mysql.createConnection({
 connects.connect();
 
 app.use(express.static('./'));
-// submit
+submit
 app.use(
     '/api',
     createProxyMiddleware({

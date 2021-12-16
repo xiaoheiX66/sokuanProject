@@ -1,12 +1,585 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>窝嫩叠</title>
+    <link rel="stylesheet" href="./temp/swiper-master/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- <script src="./jquery/jquery.js"></script> -->
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_3023677_nv30t0zevme.css">
+    <link rel="stylesheet" href="./css/dist/index.css">
+    <title>搜款网首页</title>
+    <style>
+        #navTop {
+            background-image: url(./img/soukuanlogo.jpg);
+            background-position-x: 12%;
+            background-repeat: no-repeat;
+            background-size: 201px 100%;
+        }
+    </style>
 </head>
+
 <body>
-    <div>我是index首页</div>
+    <div id="box">
+        <header>
+            <section>
+                <img src="//img.vvic.com/img/1638357891773_994097.jpg" alt="">
+            </section>
+            <section>
+                <div class="head_leftinfo">
+                    <p><span>请从这里</span>&nbsp;<span><a style="color: #ef3664;" href="./html/login.html">登录/注册</a></span>
+                    </p>
+                    <p><i class="iconfont icon-laba" style="color: #ef3664;"></i>&nbsp;&nbsp;直通车消费反赠-加反规则变更公告</p>
+                </div>
+                <div class="head_rightinfo">
+                    <nav class="navbar navbar-default" role="navigation"
+                        style="height: 40px;background-color: #ffffff;border: none;margin: 0px;">
+                        <div class="container-fluid">
+                            <div>
+                                <ul class="nav navbar-nav" style="height: 37px;">
+                                    <!-- 个人中心 -->
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            个人中心
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">数据包</a></li>
+                                            <li><a href="#">拿货单</a></li>
+                                            <li><a href="#">我的上传</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- 收藏夹 -->
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            收藏夹
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">收藏商品</a></li>
+                                            <li><a href="#">关注档口</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- 档口中心 -->
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            档口中心
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">经营通</a></li>
+                                            <li><a href="#">我的档口</a></li>
+                                            <li><a href="#">商品信息</a></li>
+                                            <li><a href="#">备货管理</a></li>
+                                            <li><a href="#">档口订单</a></li>
+                                            <li><a href="#">交易记录</a></li>
+                                            <li><a href="#">档口信息</a></li>
+                                            <li><a href="#">入驻/搬迁</a></li>
+                                            <li><a href="#">申请物料</a></li>
+                                        </ul>
+                                    </li>
+                                    <!-- 手机版 -->
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            <i class="iconfont icon-shouji"></i>&nbsp;手机版
+                                        </a>
+                                        <!-- <ul class="dropdown-menu">
+                                        <li><a href="#">数据包</a></li>
+                                        <li><a href="#">拿货单</a></li>
+                                        <li><a href="#">我的上传</a></li>
+                                    </ul> -->
+                                    </li>
+                                    <!-- 帮助中心 -->
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            帮助中心
+                                        </a>
+                                    </li>
+                                    <!-- 网站导航 -->
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            网站导航
+                                            <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#"><b>关于我们</b></a></li>
+                                            <li><a href="#">公司简介</a></li>
+                                            <li><a href="#">企业文化</a></li>
+                                            <li><a href="#">加入我们</a></li>
+                                            <li><a href="#">联系我们</a></li>
+                                            <li><a href="#">搜索网咨询台</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </nav>
+                </div>
+            </section>
+            <section id="searchBossParent">
+            <div class="searchBox">
+                <ul>
+                    <li style="position: relative;">
+                        <nav class="navbar navbar-default" role="navigation" style="height: 100%;position: absolute;
+                        border: none;width: 140px;
+                        ">
+                            <div class="container-fluid">
+                                <div>
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                广州站
+                                                <b class="caret"></b>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </li>
+                    <li>
+                        <input type="text" placeholder="&nbsp;关键词、货号">
+                        <button>搜索</button>
+                        <i class="iconfont icon-xiangji"></i>
+                    </li>
+                    <li>
+                        <p><i class="iconfont icon-gouwuchekong" ></i></p>
+                        <p>入驻/搬迁</p>
+                        <p>申请物料</p>
+                    </li>
+                </ul>
+            </div>
+            </section>
+        </header>
+        <nav id="navTop">
+            <section>
+                <ul>
+                    <li class="activeShop" style="color: #ef3664;">商品</li>
+                    <li>档口</li>
+                    <li>以图搜款</li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li style="position: relative;">
+                        <nav class="navbar navbar-default" role="navigation" style="height: 100%;position: absolute;
+                        border: none;width: 140px;
+                        ">
+                            <div class="container-fluid">
+                                <div>
+                                    <ul class="nav navbar-nav">
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                广州站
+                                                <b class="caret"></b>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </li>
+                    <li>
+                        <input type="text" placeholder="&nbsp;关键词、货号">
+                        <button>搜索</button>
+                        <i class="iconfont icon-xiangji"></i>
+                    </li>
+                    <li>
+                        <p><i class="iconfont icon-gouwuchekong" ></i></p>
+                        <p>入驻/搬迁</p>
+                        <p>申请物料</p>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>美怡</li>
+                    <li>贝拉服饰女装</li>
+                    <li>尚维洛实拍店</li>
+                    <li>快半拍女装实拍</li>
+                    <li>韩魅儿</li>
+                </ul>
+            </section>
+            <section class="sliderPageParent">
+                <div class="bankNumber"><p><i class="iconfont icon-zhanghao"></i>账号</p>
+                    <article class="sliderBank">
+                        <p>欢迎来到搜款网</p>
+                        <p>立即登录/注册</p>
+                    </article>
+                </div>
+                <div class="noticePage"><p><i class="iconfont icon-tongzhi"></i>通知</p>
+                    <article class="sliderNotice">
+                        <p><span>网站公告</span><span>档口通知</span></p>
+                        <p><span>&nbsp;<i>*</i>&nbsp;&nbsp;档口拿货记录入口调整档档档</span><span>12-15</span></p>
+                        <p><span>&nbsp;<i>*</i>&nbsp;&nbsp;12.14关于盗图严重档档档档</span><span>12-14</span></p>
+                        <p><span>&nbsp;<i>*</i>&nbsp;&nbsp;12.14关于侵权严重档档档档</span><span>12-14</span></p>
+                    </article>
+                </div>
+                <div class="getIntheTruck"><p><i class="iconfont icon-gouwuchekong"></i>进货车</p></div>
+                <div class="customService"><p><i class="iconfont icon-62"></i>客服</p>
+                    <article class="sliderService">
+                        <ul style="margin-bottom: 0px;"> 
+                            <li>
+                                <p>代发咨询</p>
+                                <p>&gt;</p>
+                                <p>售前、售中、售后咨询</p>
+                            </li>
+                            <li>
+                                <p>广告咨询</p>
+                                <p>&gt;</p>
+                                <p>换广告图、营销推广</p>
+                            </li>
+                            <li>
+                                <p>功能咨询</p>
+                                <p>&gt;</p>
+                                <p>入驻、搬迁、以及其他功能咨询</p>
+                            </li>
+                            <li>
+                                <p>大客户咨询</p>
+                                <p>&gt;</p>
+                                <p>大客户合作申请</p>
+                            </li>
+                            <li>
+                                <p>投诉建议</p>
+                                <p></p>
+                                <p>邮箱：customer@vvic.com</p>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="feedBack"><p><i class="iconfont icon-xiugai" style="font-size: 18px;"></i>反馈</p></div>
+                <div class="demensionalCode"><i class="iconfont icon-erweima" style="font-size: 20px;"></i>
+                    <article class="sliderCode">
+                        <ul>
+                            <li>
+                                <img src="./img/mini.png" alt="">
+                                <p>搜款网小程序</p>
+                            </li>
+                            <li>
+                                <img src="./img/downloadCode.png" alt="">
+                                <p>下载搜款网App</p>
+                            </li>
+                            <li>
+                                <img src="./img/downloadCodeST.png" alt="">
+                                <p>下载实体App</p>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="backToTop"><i class="iconfont icon-jiantoushang" style="font-size: 20px;"></i></div>
+            </section>
+
+        </nav>
+        <footer>
+            <section>
+                <div>
+                    <div style="padding: 0px 15px;">
+                        类目导航
+                        <p>
+                            <span></span><span></span><span></span>
+                        </p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>首页</li>
+                            <li>市场导航</li>
+                            <li>档口排行榜</li>
+                            <li>每日新款</li>
+                            <li style="position: relative;">实力质造<i class="iconfont icon-hot-"
+                                style="position: absolute;top: -21px;right:29px;color: orange;font-size: 21px;"
+                                ></i></li>
+                            <li style="position: relative;">七日热款<i class="iconfont icon-hot-"
+                                style="position: absolute;top: -21px;right: 29px;color: orange;font-size: 21px;"
+                                ></i></li>
+                            <li>视频专区</li>
+                            <li>关注档口</li>
+                            <li>服务市场</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div id="navListParentss">
+                        <dl class="navgiList">
+                            <!-- <dd >
+                                <p><i>女装</i><i style="color: #d5d5d5;">&gt;&nbsp;</i></p>
+                                <p>
+                                    <span>窝嫩叠</span>
+                                </p>
+                            </dd> -->
+                        </dl>
+                        <dl class="leftActiveCont">
+
+                        </dl>
+                    </div>
+                    <div id="swiperParentss">
+                        <!-- footertop左边轮播 -->
+                        <div id="swipherLeft">
+                            <div class="swiper-container">
+                                <div class="swiper-slide">
+                                    <img src="//img.vvic.com/img/1638770918795_333824.jpg_webp" alt="">
+                                </div>
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="//img.vvic.com/img/1632994805666_795294.jpg_webp" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.vvic.com/img/1637979857042_927303.jpg_webp" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.vvic.com/img/1636970237253_864148.jpg_webp" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.vvic.com/img/1638770918795_333824.jpg_webp" alt="">
+                                    </div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+
+                        <!-- footertop右边轮播 -->
+                        <div id="swipherRight">
+                            <!-- <img src="//img.vvic.com/img/1638496657450_178552.jpg_webp" alt=""> -->
+                            <!-- <img src="//img.vvic.com/img/1637811632718_156945.jpg_webp" alt=""> -->
+                            <img src="//img.vvic.com/img/1638839767347_754705.jpg_webp" alt="">
+
+                            <!-- Add Arrows -->
+                        </div>
+                    </div>
+                </div>
+                <div class="naviParentttt">
+                    <dl class="navgiList2">
+                        <!-- <dd>
+                            <p><i>市场</i><i>&gt;&nbsp;</i></p>
+                            <p>
+                                <span>大西豪</span>
+                                <span>国大</span>
+                            </p>
+                        </dd> -->
+                    </dl>
+                    <dl class="navgList3">
+                        <img src="./img/jingtaipc.png" alt="">
+                    </dl>
+                </div>
+                <div class="rightImsCenter">
+                    <img src="//img.vvic.com/img/1631698075397_803075.jpg" alt="" width="100%" height="100%">
+                </div>
+            </section>
+            <!-- 2 实力档口-->
+            <section id="gearindex_mouth">
+                <div>
+                    <p>实力档口</p>
+                    <!-- <i class="indexClick">&lt;</i>&nbsp;&nbsp;
+                        <span><i style="color:#fb65a6">1</i>/<i>5</i></span>&nbsp;&nbsp;
+                        <i class="finalClick">&gt;</i> -->
+                    <ul class="pagination" style="background-color: #f5f5f5;">
+                        <li class="clickLeftpagi"><a href="#" style="border:none;background-color: #f5f5f5;">&laquo;</a>
+                        </li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountLeft">1</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;">/</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountRight">5</a></li>
+                        <li class="clickRgihtpagi"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&raquo;</a></li>
+                    </ul>
+
+                </div>
+                <div class="gearindex_mouth_sons">
+                    <div>
+                        <ul class="gearindex_mouth_sonsTop">
+                            <!-- <li class="lis_active">Oni欧尼-工厂已开</li> -->
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="gearindex_mouth_sonsList">
+                            <!-- <li>1</li> -->
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 当季推荐 -->
+            <section>
+                <div>
+                    <p>当季推荐</p>
+                    <ul class="pagination">
+                        <li class="clickLeftpagi2"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&laquo;</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountLeft">1</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;">/</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountRight">5</a></li>
+                        <li class="clickRgihtpagi2"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&raquo;</a></li>
+                    </ul>
+                </div>
+                <div id="normalSeasonIntro">
+                    <div class="introLeft">
+                        <ul class="introLeftSons">
+                            <!-- <li>窝嫩叠</li> -->
+                        </ul>
+                    </div>
+                    <div class="introRightList">
+                        <dl class="rightImgListss">
+                            <dt>大图</dt>
+                            <dd>
+                                <p>
+                                    <img src="./img/lefttest4.jpg" alt="">
+                                    <span>￥50.00</span>
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </section>
+            <!-- 旗舰店铺 -->
+            <section>
+                <div>
+                    <p>旗舰店铺</p>
+                    <ul class="pagination">
+                        <li class="clickLeftpagi2"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&laquo;</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountLeft">1</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;">/</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountRight">5</a></li>
+                        <li class="clickRgihtpagi2"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&raquo;</a></li>
+                    </ul>
+                </div>
+                <div id="flagshipStore">
+                    <!-- 旗舰店铺主要内容 -->
+                </div>
+            </section>
+            <!-- 风格馆 -->
+            <section>
+                <div>
+                    <p>风格馆</p>
+                    <ul class="pagination">
+                        <li class="clickLeftpagi3"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&laquo;</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountLeft">1</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;">/</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountRight">5</a></li>
+                        <li class="clickRgihtpagi3"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&raquo;</a></li>
+                    </ul>
+                </div>
+                <div id="styleMuseumImgs">
+                    <ul class="stylemuseumss">
+                        <!-- <li class="styleSonss">
+                           <article class="mainMixstyle">
+                            <div><img src="img/lefttest4.jpg"></div>
+                            <div>
+                                <p><img src="./img/lefttest4.jpg" alt=""><span><i style="color: #ef3664;font-size: 20px;">￥49.00</i>
+                                    <i style="color: #6c6c6c;font-size: 15px;">艾米兰</i></span></p>
+                                <p><img src="./img/lefttest4.jpg" alt=""><span>2</span></p>
+                                <p><img src="./img/lefttest4.jpg" alt=""><span>3</span></p>
+                                <p><img src="./img/lefttest3.jpg" alt=""><span>4</span></p>
+                            </div>
+                           </article>
+                        </li> -->
+                        <!-- <li class="styleSonss">2</li>
+                        <li class="styleSonss" >3</li>
+                        <li class="styleSonss active">4</li> -->
+                    </ul>
+                </div>
+            </section>
+            <!-- 精选店铺 -->
+            <section>
+                <div id="selectedGoodsTop">
+                    <p>精选店铺</p>
+                    <ul class="pagination" style="background-color: #f5f5f5;">
+                        <li class="clickLeftpagi4"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&laquo;</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountLeft">1</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;">/</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountRight">5</a></li>
+                        <li class="clickRgihtpagi4"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&raquo;</a></li>
+                    </ul>
+                </div>
+                <div id="selectedGoodsNav">
+                    <!-- 精选店铺内容 -->
+                </div>
+            </section>
+            <!-- 热门商品 -->
+            <section>
+                <div id="hotShopsTop">
+                    <p>热门商品</p>
+                    <ul class="pagination">
+                        <li class="clickLeftpagi3"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&laquo;</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountLeft">1</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;">/</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountRight">5</a></li>
+                        <li class="clickRgihtpagi3"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&raquo;</a></li>
+                    </ul>
+                </div>
+                <div id="hotShopsCont">
+                    <ul class="hotShopListParent">
+                        <!-- <li class="hotShopsList">
+                            <img src="./img/lefttest3.jpg" alt="">
+                            <div><p>￥18.00</p>
+                            <p>窝嫩叠</p></div>
+                        </li>  -->
+                    </ul>
+                </div>
+            </section>
+            <!-- 猜你喜欢 -->
+            <section>
+                <div id="guessYourFavorite">
+                    <p>猜你喜欢</p>
+                    <ul class="pagination">
+                        <li class="clickLeftpagi3"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&laquo;</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountLeft">1</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;">/</a></li>
+                        <li><a href="#" style="border:none;background-color: #f5f5f5;" class="pageCountRight">5</a></li>
+                        <li class="clickRgihtpagi3"><a href="#"
+                                style="border:none;background-color: #f5f5f5;">&raquo;</a></li>
+                    </ul>
+                </div>
+                <div id="guessYourFavoriteContent">
+                    <ul class="guessYourList">
+                        <li>
+                            <img src="./img/lefttest4.jpg" alt="">
+                            <p>￥46.00</p>
+                            <p>
+                                <span>HS-花式剑</span><span>8688</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script src="../index.js"></script>
+    <script src="./temp/swiper-master/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 0,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
 </body>
+
 </html>
