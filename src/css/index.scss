@@ -1428,6 +1428,14 @@ footer{
                     display: flex;
                     flex-direction: column;
                    margin-top: 20px;
+                   a{
+                       flex: 1;
+                       height: 90%;
+                       img{
+                        width: 100%;
+                        height: 100%;
+                       }
+                   }
                     div{
                         width: 100%;
                         height: 60px;
@@ -1453,10 +1461,7 @@ footer{
                             text-align: right;
                         }
                     }
-                     img{
-                         flex: 1;
-                         height: 90%;
-                        }
+                    
                 }
             }
         }
@@ -1509,11 +1514,17 @@ footer{
                     justify-content: center;
                     align-items: center;
                     margin-top: 23px;
-                    img{
+                    a{
                         flex: 1;
                         width: 100%;
                         height: 81%;
+                        img{
+                        flex: 1;
+                        width: 100%;
+                        height: 100%;
                     }
+                    }
+                    
                     p{
                         width: 100%;
                         display: flex;
@@ -1579,4 +1590,7 @@ footer{
 }
 img{
     cursor: pointer;
+}
+.scrollTopss{
+    display: flex;
 }

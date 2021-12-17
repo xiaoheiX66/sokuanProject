@@ -7,6 +7,7 @@ let normalSeasonIntro = document.querySelector("#normalSeasonIntro")
 let flagshipStore = document.querySelector("#flagshipStore")
 let flagStoreImgBottom = document.querySelector(".flagStoreImgBottom")
 let selectedGoodsNav = document.querySelector("#selectedGoodsNav")
+let searchBossParent = document.querySelector("#searchBossParent")
 $.ajax({
     url:"./js/navigation.json",
     data:{
@@ -135,14 +136,14 @@ $(".backToTop").click(function(e){
     $("#box").animate({scrollTop:0},650)
 })
 // 顶部显隐
-$(window).scroll(function(){
-    var scrollY = $(document).scrollTop();
-      if(scrollY>500){
-        $("#searchBossParent").css({"display":"flex"})
-    }else{
-        $("#searchBossParent").css({"display":"none"})
-    }
-})
+// $(window).scroll(function(){
+//     var scrollY = $(document).scrollTop();
+//       if(scrollY>500){
+//         $("#searchBossParent").show()
+//     }else{
+//         $("#searchBossParent").hide()
+//     }
+// })
 
 // 实力档口currentPage=1&newCount=0&traceId=
 gear_mouth()
@@ -196,10 +197,12 @@ itemParents.onclick = function(e){
         let index = e.target.getAttribute("index")
         let resImgs = JSON.parse(localStorage.getItem("gearMouth"))
         let newArr = resImgs.slice(0,5);
+        console.log("实力档口",newArr);
         let str = "";
         newArr[index].items.map((item,index)=>{
             return str +=`
-            <li><img src="${item.ad_img_url}" alt="">
+            <li>
+            <a href="./html/item.html?${item.vid}"><img src="${item.ad_img_url}" alt=""></a>
             <p>￥${parseInt(item.discount_price)}</p>
             </li>
             `
@@ -215,7 +218,9 @@ function renderMouth(){
     console.log("渲染总部",res);
     res[0].items.map((item)=>{
         return  str+=`
-        <li><img src="${item.ad_img_url}" alt="">
+        <li>
+        <a href="./html/item.html?id=${item.vid}">
+        <img src="${item.ad_img_url}" alt=""></a>
             <p>￥${parseInt(item.discount_price)}</p>
             </li>   
         ` 
@@ -267,13 +272,15 @@ function normalImgsRender(data){
         // console.log("diao",item);
         return str=`
         <dt>
-        <img src="${item.adImgUrl}" width="100%" height="100%">
+        <a href="./html/item.html?id=${item.vid}">
+        <img src="${item.adImgUrl}" width="100%" height="100%"></a>
         </dt>
             <dd>
                 ${newArr.map((item)=>{
                     return `
                     <p>
-                    <img src="${item.adImgUrl}" alt="" >
+                    <a href="./html/item.html?id=${item.vid}">
+                    <img src="${item.adImgUrl}" alt="" ></a>
                     <span>￥${item.discountPrice}.00</span>
                 </p>
                     `
@@ -301,13 +308,14 @@ normalSeasonIntro.onclick=function(e){
         arr[index].materialList.map((item)=>{
             return str=`
             <dt>
-            <img src="${item.adImgUrl}" width="100%" height="100%">
+            <a href="./html/item.html?id=${item.vid}">
+            <img src="${item.adImgUrl}" width="100%" height="100%"></a>
             </dt>
                 <dd>
                     ${sonArr.map((item)=>{
                         return `
-                        <p>
-                        <img src="${item.adImgUrl}" alt="" >
+                        <p><a href="./html/item.html?id=${item.vid}">
+                        <img src="${item.adImgUrl}" alt="" ></a>
                         <span>￥${item.discountPrice}.00</span>
                     </p>
                         `
@@ -360,8 +368,8 @@ function renderFlagShopson(data){
                             <dd>
                             ${data[0][0].materialList.map((item,index)=>{
                                 return `
-                                <p>
-                                <img src="${item.indexImgUrl}" alt="">
+                                <p><a href="./html/item.html?id=${item.vid}">
+                                <img src="${item.indexImgUrl}" alt=""></a>
                                 <span>￥${item.discountPrice}</span>
                             </p>
                                 `
@@ -371,8 +379,8 @@ function renderFlagShopson(data){
                                 <p class="personShops">人气商品</p>
                                <div>
                                ${data[0][0].hotList.map((item)=>{
-                                   return ` <p>
-                                   <img src="${item.indexImgUrl}" alt="">
+                                   return ` <p><a href="./html/item.html?id=${item.vid}">
+                                   <img src="${item.indexImgUrl}" alt=""></a>
                                    <span>
                                        <i>${item.title}</i>
                                        <i>￥${item.discountPrice}</i>
@@ -403,8 +411,8 @@ flagshipStore.onclick = function(e){
             <dd>
             ${storeData[index].materialList.map((item)=>{
                 return `
-                <p>
-                <img src="${item.indexImgUrl}" alt="">
+                <p><a href="./html/item.html?id=${item.vid}">
+                <img src="${item.indexImgUrl}" alt=""></a>
                 <span>￥${item.discountPrice}</span>
             </p>
                 `
@@ -414,8 +422,8 @@ flagshipStore.onclick = function(e){
                 <p class="personShops">人气商品</p>
                <div>
                ${storeData[index].hotList.map((item)=>{
-                   return ` <p>
-                   <img src="${item.indexImgUrl}" alt="">
+                   return ` <p><a href="./html/item.html?id=${item.vid}">
+                   <img src="${item.indexImgUrl}" alt=""></a>
                    <span>
                        <i>${item.title}</i>
                        <i>￥${item.discountPrice}</i>
@@ -462,11 +470,13 @@ function renderMuseumss(data){
         return str+=`
         <li class="styleSonss">
         <article class="mainMixstyle">
-         <div><img src="${item.materialList[index].adImgUrl}"></div>
+         <div>
+         <img src="${item.materialList[index].adImgUrl}"></div>
          <div>
            ${data[index].materialList.slice(1,data[index].materialList.length).map((item)=>{
                return `
-               <p><img src="${item.adImgUrl}" alt="">
+               <p>
+               <img src="${item.adImgUrl}" alt="">
                <span>
                <i style="color: #ef3664;font-size: 23px;">￥${item.discountPrice}</i>
                <i style="color: #6c6c6c;font-size: 17px;">${item.shopDesc}</i></span>
@@ -543,21 +553,21 @@ function renderSelectedGoodsContent(data){
              </video>
              </dd>
              <dd>
-                 <div>
-                     <img src="${item.materialList[1].adImgUrl}">
+                 <div><a href="./html/item.html?id=${item.vid}">
+                     <img src="${item.materialList[1].adImgUrl}"></a>
                  </div>
                  <div>
                    ${newArr2.map(item=>{
-                       return `  <p>
-                       <img src="${item.adImgUrl}" alt="">
+                       return `  <p><a href="./html/item.html?id=${item.vid}">
+                       <img src="${item.adImgUrl}" alt=""></a>
                        <span>￥${item.discountPrice}.00</span>
                    </p>`
                    }).join("")}
                  </div>
              </dd>
              <dd>
-                 <p>
-                     <img src="${item.materialList[5].adImgUrl}">
+                 <p><a href="./html/item.html?id=${item.vid}">
+                     <img src="${item.materialList[5].adImgUrl}"></a>
                  </p>
                  <p>
                     <button>进入商铺</button>
@@ -592,21 +602,21 @@ selectedGoodsNav.onclick = function(e){
                  </video>
                  </dd>
                  <dd>
-                     <div>
-                     <img src="${data[index].materialList[1].adImgUrl}">
+                     <div><a href="./html/item.html?id=${item.vid}">
+                     <img src="${data[index].materialList[1].adImgUrl}"></a>
                      </div>
                      <div>
                        ${newArr.map(item=>{
-                           return `  <p>
-                           <img src="${item.adImgUrl}" alt="">
+                           return `  <p><a href="./html/item.html?id=${item.vid}">
+                           <img src="${item.adImgUrl}" alt=""></a>
                            <span>￥${item.discountPrice}.00</span>
                        </p>`
                        }).join("")}
                      </div>
                  </dd>
                  <dd>
-                     <p>
-                         <img src="${data[index].materialList[5].adImgUrl}">
+                     <p><a href="./html/item.html?id=${item.vid}">
+                         <img src="${data[index].materialList[5].adImgUrl}"></a>
                      </p>
                      <p>
                         <button>进入商铺</button>
@@ -643,8 +653,8 @@ function renderHotShopsCont(data){
     let str = "";
     data.map((item)=>{
         return str+=`
-        <li class="hotShopsList">
-        <img src="${item.ad_img_url}" alt="">
+        <li class="hotShopsList"><a href="./html/item.html?id=${item.vid}">
+        <img src="${item.ad_img_url}" alt=""></a>
         <div><p>￥${item.price}</p>
         <p>${item.bname}</p></div>
     </li> 
@@ -675,8 +685,8 @@ function renderYourLikeContent(data){
     let str = "";
     data.map((item)=>{
         return str+=`
-        <li>
-          <img src="${item.index_img_url}" alt="">
+        <li><a href="./html/item.html?id=${item.vid}">
+          <img src="${item.index_img_url}" alt=""></a>
          <p>￥${item.discount_price}</p>
           <p>
               <span><img src="//src.vvic.com/statics/v2/css/img/slzz/slzz-item.png" alt>&nbsp;${item.shop_name}</span><span>${item.art_no}#</span>
